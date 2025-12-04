@@ -1,4 +1,4 @@
-# 📚 Guide d'Analyse et Conception Logicielle
+# 📚 Guide
 
 > Documentation complète sur les principes SOLID, patrons GRASP et Design Patterns
 
@@ -77,7 +77,7 @@
 
 - **Livre de référence**: "Design Patterns: Elements of Reusable Object-Oriented Software" (Gang of Four)
 - **Livre GRASP**: "Applying UML and Patterns" - Craig Larman
-- **Polymtl**: LOG2400 Analyse et Conception logiciel
+- **Polymtl**: LOG2400 Analyse et Conception de logiciels
 
 ---
 
