@@ -35,11 +35,11 @@ Composer des objets en **structures arborescentes** pour représenter des hiéra
 │                 │ +ajouter(Composant)  │                     │  │
 │                 │ +retirer(Composant)  │                     │  │
 │                 │ +getEnfant(i)        │                     │  │
-│                 └──────────┬───────────┘                     │  │
+│                 └──────────▲───────────┘                     │  │
 │                            │                                 │  │
 │              ┌─────────────┴─────────────┐                   │  │
 │              │                           │                   │  │
-│    ┌─────────▼─────────┐       ┌─────────▼─────────┐         │  │
+│    ┌─────────┴─────────┐       ┌─────────┴─────────┐         │  │
 │    │      Feuille      │       │     Composite     │◆───────┘  │
 │    ├───────────────────┤       ├───────────────────┤   enfants  │
 │    │ +operation() {    │       │ -enfants[]        │            │
