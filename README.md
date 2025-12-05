@@ -1,6 +1,4 @@
-# Analyse et Conception de logiciels (software design pattern)
-
-Bienvenue dans ce guide complet sur l'analyse et la conception logicielle orientée objet.
+# Analyse et Conception de logiciels (software design patterns)
 
 ## 📚 Contenu
 
