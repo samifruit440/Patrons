@@ -17,6 +17,7 @@
 #### Patrons Créationnels
 | Patron | Description |
 |--------|-------------|
+| [🏭 **Guide Patrons Créationnels**](./Patrons/Creationnel/README.md) | 📍 Problème → Patron (quand utiliser quoi) |
 | [🏭 Fabrique (Factory)](./Patrons/Creationnel/Fabrique.md) | Crée des objets sans spécifier leur classe concrète |
 | [🏭 Fabrique Abstraite](./Patrons/Creationnel/FabriqueAbstraite.md) | Familles d'objets liés sans spécifier classes concrètes |
 | [1️⃣ Singleton](./Patrons/Creationnel/Singleton.md) | Garantit une instance unique d'une classe |
@@ -24,6 +25,7 @@
 #### Patrons Structurels
 | Patron | Description |
 |--------|-------------|
+| [🧱 **Guide Patrons Structurels**](./Patrons/Structurel/README.md) | 📍 Problème → Patron (quand utiliser quoi) |
 | [🎨 Décorateur](./Patrons/Structurel/Decorateur.md) | Ajoute dynamiquement des responsabilités |
 | [🌳 Composite](./Patrons/Structurel/Composite.md) | Compose des objets en structures arborescentes |
 | [🔌 Adaptateur](./Patrons/Structurel/Adaptateur.md) | Convertit l'interface d'une classe |
@@ -33,6 +35,7 @@
 #### Patrons Comportementaux
 | Patron | Description |
 |--------|-------------|
+| [🎭 **Guide Patrons Comportementaux**](./Patrons/Comportemental/README.md) | 📍 Problème → Patron (quand utiliser quoi) |
 | [👁️ Observateur](./Patrons/Comportemental/Observateur.md) | Notification de changement d'état |
 | [📋 Patron de Méthode](./Patrons/Comportemental/PatronMethode.md) | Squelette d'algorithme avec étapes redéfinissables |
 | [🔄 Itérateur](./Patrons/Comportemental/Iterateur.md) | Parcours séquentiel d'une collection |

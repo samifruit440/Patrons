@@ -24,16 +24,19 @@ RevFinalLOG2400/
 │   └── README.md              # Patrons GRASP
 └── Patrons/
     ├── Creationnel/
+    │   ├── README.md              # 📍 Guide
     │   ├── Fabrique.md
     │   ├── FabriqueAbstraite.md
     │   └── Singleton.md
     ├── Structurel/
+    │   ├── README.md              # 📍 Guide
     │   ├── Adaptateur.md
     │   ├── Composite.md
     │   ├── Decorateur.md
     │   ├── Facade.md
     │   └── Proxy.md
     └── Comportemental/
+        ├── README.md              # 📍 Guide
         ├── Commande.md
         ├── Etat.md
         ├── Iterateur.md
