@@ -64,10 +64,10 @@ Fournir un **substitut** ou un **placeholder** pour un autre objet afin de **con
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
 │   1. PROXY VIRTUEL (Lazy Loading)                               │
-│      ┌─────────────────────────────────────────┐                │
-│      │ Diffère la création de l'objet coûteux  │                │
+│      ┌──────────────────────────────────────────┐               │
+│      │ Diffère la création de l'objet coûteux   │               │
 │      │ jusqu'à ce qu'il soit vraiment nécessaire│               │
-│      └─────────────────────────────────────────┘                │
+│      └──────────────────────────────────────────┘               │
 │      Ex: Charger une image seulement à l'affichage              │
 │                                                                 │
 │   2. PROXY DE PROTECTION (Access Control)                       │
