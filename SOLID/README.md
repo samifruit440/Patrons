@@ -399,12 +399,46 @@ void faireMigrer(OiseauVolant& oiseau) {
 
 ### 📏 Règles du LSP
 
-| Règle | Description |
-|-------|-------------|
-| **Préconditions** | Ne peuvent pas être renforcées dans le sous-type |
-| **Postconditions** | Ne peuvent pas être affaiblies dans le sous-type |
-| **Invariants** | Doivent être préservés |
-| **Contrainte historique** | Les sous-types ne peuvent pas ajouter de méthodes qui modifient l'état d'une manière interdite par le type de base |
+Le principe de Liskov (LSP) est avant tout un principe de "substitution comportementale" : un sous-type doit pouvoir remplacer sa superclasse sans que le comportement attendu par les clients ne change.
+
+Voici des règles pratiques:
+
+| Règle | Conséquence |
+|------:|------------------------------------|
+| **Préconditions** | Un sous-type **ne doit pas** renforcer les préconditions d'une méthode : il ne peut exiger plus que la superclasse. Si le sous-type demande des conditions plus strictes, des clients valides pour la superclasse risquent d'échouer. |
+| **Postconditions** | Un sous-type **ne doit pas** affaiblir les postconditions : il doit garantir au moins ce que la superclasse garantit (ou plus). Sinon, le client pourrait s'appuyer sur des résultats qui ne sont plus assurés. |
+| **Invariants** | Les invariants (propriétés qui doivent toujours tenir pour une instance) définis par la superclasse doivent être préservés par le sous-type. La classe dérivée ne doit pas rompre l'état attendu. |
+| **Comportement observable** | Le sous-type ne doit pas modifier l'effet observable attendu (effets de bord, exceptions, performance critique attendue), sauf si cela reste compatible avec les attentes du client. |
+| **Signature & variance** | Les signatures doivent être compatibles (types des paramètres et du retour). Attention à la covariance/contravariance selon le langage — respecter les règles du langage pour éviter des incompatibilités de types. |
+
+### ✅ Checklist rapide pour vérifier LSP
+- Les méthodes surchargées acceptent au moins les mêmes entrées que la superclasse (préconditions pas plus strictes) ?
+- Les méthodes surchargées garantissent au moins les mêmes résultats (postconditions pas plus faibles) ?
+- Les invariants de la superclasse sont toujours vrais pour les instances du sous-type ?
+- Le sous-type ne lance pas d'exceptions nouvelles non gérées par les clients ?
+- Le code client n'a pas besoin de vérifier le type concret (`instanceof`, `dynamic_cast`) pour fonctionner correctement ?
+- L'utilisation du sous-type ne provoque pas d'effets de bord inattendus (modification d'état global, I/O non prévu) ?
+
+### 🔎 Exemples & pièges courants
+- Carré / Rectangle : classique — implémenter Carré comme sous-classe de Rectangle peut violer LSP si l'API permet de modifier largeur/hauteur indépendamment. Solution : extraire interfaces distinctes (ex. Forme2D, RectangleMutable) ou éviter cet héritage.  
+- Oiseau / Pingouin : si l'interface Oiseau expose `voler()`, alors Pingouin ne doit pas hériter de Oiseau (ou l'interface doit être refactorée en OiseauVolant et OiseauNonVolant).  
+- Exceptions : une surcharge qui lance une exception non documentée crée des surprises côté client — préférer signaler contractuellement les exceptions attendues.  
+
+### 🛠️ Techniques pour respecter LSP
+- Refactorer les interfaces pour séparer les comportements (ISP aide ici).  
+- Utiliser des interfaces abstraites (ou traits) pour exprimer les capacités (ex. Volant, Nageur) plutôt que d'imposer des méthodes sur une superclasse générale.  
+- Documenter les pré/postconditions et invariants (contrats, commentaires, ou langages/OUTILS qui supportent les contrats).  
+- Utiliser des tests de substitution : pour un objet S qui dérive de T, exécuter la suite de tests de T sur S pour vérifier qu'il se comporte comme attendu.  
+
+### ⚠️ Pièges avancés
+- Covariance/contravariance : certains langages autorisent la covariance sur les types de retour mais pas sur les paramètres ; respecter les règles du langage pour ne pas casser les appels polymorphes.  
+- Performance et temps de réponse : si le client dépend implicitement d'une caractéristique non documentée (ex. complexité algorithmique), un sous-type plus lent peut casser le système. Documenter les garanties de performance si elles sont importantes.  
+
+### ✔️ Exemple de test de substitution (conceptuel)
+1. Écrire une suite de tests pour l'interface `T` (contrat attendu).  
+2. Exécuter la même suite avec une instance de `S` (sous-type).  
+3. Si tous les tests passent, la substitution est probablement sûre ; sinon, corriger l'implémentation ou revoir l'architecture.
+
 
 ### ❌ Signaux d'alerte
 - Méthode override qui lance une exception non prévue
@@ -441,16 +475,16 @@ Préférer plusieurs **interfaces spécifiques** plutôt qu'une seule interface 
 │   │ +agrafer()             │                                │
 │   └───────────┬────────────┘                                │
 │               │                                             │
-│        ┌──────┴──────┐                                      │
-│        │             │                                      │
-│   ┌────▼────┐   ┌────▼─────────┐                            │
-│   │Imprimante│  │ImprimanteSimple│                          │
-│   │MultiFunc│   ├──────────────┤                            │
-│   └─────────┘   │+scanner()    │ ◄── Doit implémenter       │
-│                 │ { VIDE! }    │     des méthodes inutiles! │
-│                 │+faxer()      │                            │
-│                 │ { VIDE! }    │                            │
-│                 └──────────────┘                            │
+│        ┌──────┴───────┐                                     │
+│        │              │                                     │
+│   ┌────▼─────┐   ┌────▼───────────┐                         │
+│   │Imprimante│   │ImprimanteSimple│                         │
+│   │MultiFunc │   ├────────────────┤                         │
+│   └──────────┘   │+scanner()      │ ◄── Doit implémenter    │
+│                  │ { VIDE! }      │  des méthodes inutiles! │
+│                  │+faxer()        │                         │
+│                  │ { VIDE! }      │                         │
+│                  └────────────────┘                         │
 │                                                             │
 │   ✅ RESPECTE ISP: Interfaces ségrégées                     │
 │                                                             │
