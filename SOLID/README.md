@@ -186,14 +186,14 @@ On doit pouvoir **ajouter** des fonctionnalités sans **modifier** le code exist
 │                                                             │
 │   ✅ RESPECTE OCP (étendre sans modifier)                   │
 │                                                             │
-│                  ┌──────────────┐                           │
-│                  │ «interface»  │                           │
-│                  │    Forme     │◄─── FERMÉ à modification  │
-│                  ├──────────────┤                           │
-│                  │ +getAire()   │                           │
-│                  └──────┬───────┘                           │
-│           ┌─────────────┼─────────────┐                     │
-│           │             │             │                     │
+│                   ┌──────────────┐                          │
+│                   │ «interface»  │                          │
+│                   │    Forme     │◄─── FERMÉ à modification │
+│                   ├──────────────┤                          │
+│                   │ +getAire()   │                          │
+│                   └──────┬───────┘                          │
+│           ┌──────────────┼──────────────┐                   │
+│           │              │              │                   │
 │      ┌────▼─────┐   ┌────▼─────┐   ┌────▼─────┐             │
 │      │ Cercle   │   │  Carré   │   │Triangle  │ ◄─ OUVERT   │
 │      ├──────────┤   ├──────────┤   ├──────────┤ à extension │
