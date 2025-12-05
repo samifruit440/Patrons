@@ -34,12 +34,12 @@ Convertir l'**interface d'une classe** en une autre interface que les clients at
 │   └──────┬───────┘      │      Cible       │                    │
 │          │ utilise      ├──────────────────┤                    │
 │          └─────────────►│ +requete()       │                    │
-│                         └────────┬─────────┘                    │
+│                         └────────▲─────────┘                    │
 │                                  │                              │
-│                         ┌────────▼─────────┐                    │
+│                         ┌────────┴─────────┐                    │
 │                         │    Adaptateur    │                    │
 │                         ├──────────────────┤                    │
-│                         │ -adapte: Adapte  │◆───────┐          │
+│                         │ -adapte: Adapte  │─────────┐          │
 │                         ├──────────────────┤         │          │
 │                         │ +requete() {     │         │          │
 │                         │   adapte.        │         │          │
@@ -47,7 +47,7 @@ Convertir l'**interface d'une classe** en une autre interface que les clients at
 │                         │ }                │         │          │
 │                         └──────────────────┘         │          │
 │                                                      │          │
-│                                           ┌──────────▼────────┐ │
+│                                           ┌──────────▽───────┐ │
 │                                           │      Adapté       │ │
 │                                           ├───────────────────┤ │
 │                                           │ +requeteSpec()    │ │
@@ -61,11 +61,11 @@ Convertir l'**interface d'une classe** en une autre interface que les clients at
 │   │      Cible       │           │      Adapté       │          │
 │   ├──────────────────┤           ├───────────────────┤          │
 │   │ +requete()       │           │ +requeteSpec()    │          │
-│   └────────┬─────────┘           └─────────┬─────────┘          │
+│   └────────▲─────────┘           └─────────▲─────────┘          │
 │            │                               │                    │
 │            └───────────┬───────────────────┘                    │
 │                        │ héritage privé                         │
-│               ┌────────▼─────────┐                              │
+│               ┌────────┴─────────┐                              │
 │               │    Adaptateur    │                              │
 │               ├──────────────────┤                              │
 │               │ +requete() {     │                              │
