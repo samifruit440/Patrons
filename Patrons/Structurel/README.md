@@ -29,15 +29,15 @@ Les **patrons structurels** s'intéressent à la **composition des classes et ob
 ```
 Besoin de...
 │
-├─► Faire collaborer deux interfaces incompatibles ──────► Adaptateur
+├─► Faire collaborer deux interfaces incompatibles ─────────► Adaptateur
 │
 ├─► Traiter des objets simples et composés de la même façon ► Composite
 │
-├─► Ajouter des comportements à un objet à l'exécution ──► Décorateur
+├─► Ajouter des comportements à un objet à l'exécution ─────► Décorateur
 │
-├─► Simplifier une API complexe ─────────────────────────► Façade
+├─► Simplifier une API complexe ────────────────────────────► Façade
 │
-└─► Contrôler/différer l'accès à un objet ───────────────► Proxy
+└─► Contrôler/différer l'accès à un objet ──────────────────► Proxy
 ```
 
 ---
