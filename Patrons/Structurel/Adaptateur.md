@@ -32,9 +32,9 @@ Convertir l'**interface d'une classe** en une autre interface que les clients at
 │   ┌──────────────┐      ┌──────────────────┐                    │
 │   │    Client    │      │   «interface»    │                    │
 │   └──────┬───────┘      │      Cible       │                    │
-│          │              ├──────────────────┤                    │
-│          │ utilise      │ +requete()       │                    │
-│          └─────────────►└────────┬─────────┘                    │
+│          │ utilise      ├──────────────────┤                    │
+│          └─────────────►│ +requete()       │                    │
+│                         └────────┬─────────┘                    │
 │                                  │                              │
 │                         ┌────────▼─────────┐                    │
 │                         │    Adaptateur    │                    │
@@ -64,7 +64,7 @@ Convertir l'**interface d'une classe** en une autre interface que les clients at
 │   └────────┬─────────┘           └─────────┬─────────┘          │
 │            │                               │                    │
 │            └───────────┬───────────────────┘                    │
-│                        │ hérite                                 │
+│                        │ héritage privé                         │
 │               ┌────────▼─────────┐                              │
 │               │    Adaptateur    │                              │
 │               ├──────────────────┤                              │
