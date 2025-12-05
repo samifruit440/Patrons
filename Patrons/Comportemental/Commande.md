@@ -56,7 +56,7 @@ Encapsuler une requête comme un **objet**, permettant ainsi de:
 │                    │ +annuler()     │  │ +annuler()   │  │ +annuler()  │ │
 │                    └────────────────┘  └──────────────┘  └─────────────┘ │
 │                           ◆                   ◆                 ◆     │
-│                           │                    │ dépendent de     │      │
+│                           │                    │                  │      │
 │                           │                    │ (reçoivent)      │      │
 │                           └────────┬───────────┴──────────────────┘      │
 │                                    │                                     │

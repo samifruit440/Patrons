@@ -42,7 +42,7 @@ Permettre à un objet de **modifier son comportement** lorsque son **état inter
 │                        ┌────────┴───┐  ┌─────┴──────┐ ┌────┴────┐│
 │                        │  EtatA     │  │   EtatB    │ │  EtatC  ││
 │                        ├────────────┤  ├────────────┤ ├─────────┤│
-│                        │ +gerer() { │  │ +gerer()   │ │+gerer() ││
+│                        │ +gerer() { │  │ +gerer(){  │ │+gerer() ││
 │                        │  // action │  │  // action │ │         ││
 │                        │  // puis   │  │  // puis   │ │         ││
 │                        │  // changer│  │  // changer│ │         ││

@@ -32,18 +32,18 @@ Définir une relation de **dépendance un-à-plusieurs** entre objets, de façon
 │    │        Sujet         │       │      Observateur     │      │
 │    ├──────────────────────┤       ├──────────────────────┤      │
 │    │ +attacher(obs)       │       │ +mettreAJour(sujet)  │      │
-│    │ +detacher(obs)       │◆────►│                      │      │
-│    │ +notifier()          │       └──────────┬───────────┘      │
-│    └──────────┬───────────┘                  │                  │
+│    │ +detacher(obs)       │⋄─────►│                      │      │
+│    │ +notifier()          │       └──────────△──────────┘      │
+│    └──────────▲───────────┘                  │                  │
 │               │                              │                  │
 │               │                              │                  │
-│    ┌──────────▼───────────┐       ┌──────────▼───────────┐      │
+│    ┌──────────┴───────────┐       ┌──────────┴───────────┐      │
 │    │     SujetConcret     │       │  ObservateurConcret  │      │
 │    ├──────────────────────┤       ├──────────────────────┤      │
 │    │ -etat                │       │ -etatObservateur     │      │
 │    │ -observateurs[]      │       │ -sujet               │      │
 │    ├──────────────────────┤       ├──────────────────────┤      │
-│    │ +getEtat()           │◄──────│ +mettreAJour()       │      │
+│    │ +getEtat()           │──────►│ +mettreAJour()       │      │
 │    │ +setEtat(e)          │       └──────────────────────┘      │
 │    │ +notifier()          │                                     │
 │    └──────────────────────┘                                     │
@@ -75,7 +75,7 @@ Définir une relation de **dépendance un-à-plusieurs** entre objets, de façon
 │     │             │  mettreAJour()│               │             │
 │     │             │               │               │             │
 │     │             │──────────────────────────────►│             │
-│     │             │            mettreAJour()      │             │
+│     │             │  mettreAJour()│               │             │
 │     │             │               │               │             │
 │     │             │◄──────────────│               │             │
 │     │             │    getEtat()  │               │             │

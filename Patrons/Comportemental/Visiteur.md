@@ -34,15 +34,15 @@ Représenter une **opération à effectuer** sur les éléments d'une structure 
 │     │   «interface»        │     │     │   «interface»        │                             │
 │     │      IElement        │     │     │     IVisiteur        │                             │
 │     ├──────────────────────┤     │     ├──────────────────────┤                             │
-│     │ +accepter(v)         │──────────►│ +visiterCercle(c)    │                             │
-│     │  (reçoit IVisiteur)  │     │     │ +visiterRectangle(r) │                             │
-│     └──────────┬───────────┘     │     │ +visiterTriangle(t)  │                             │
-│                │                 │     └──────────┬───────────┘                             │
+│     │ +accepter(v)         │◄──────────│ +visiterCercle(c)    │                             │
+│     │  (reçoit IVisiteur)  │  (visite) │ +visiterRectangle(r) │                             │
+│     └──────────▲───────────┘     │     │ +visiterTriangle(t)  │                             │
+│                │                 │     └──────────▲───────────┘                             │
 │                │ implémente      │                │ implémente                              │
 │                │                 │                │                                         │
 │     ┌──────────┼───────────────┐ │     ┌──────────┼──────────────────┐                      │
 │     │          │               │ │     │          │                  │                      │
-│  ┌──▼──┐  ┌────▼───┐  ┌────────▼┐│   ┌─▼──────┐  ┌▼────────┐  ┌──────▼───┐                  │
+│  ┌──┴──┐  ┌────┴───┐  ┌────────┴┐│   ┌─┴──────┐  ┌┴────────┐  ┌──────┴───┐                  │
 │  │ Cer │  │ Rect   │  │Triangle ││   │CalcAir │  │Affichage│  │ Perimtre │                  │
 │  ├─────┤  ├────────┤  ├─────────┤│   ├────────┤  ├─────────┤  ├──────────┤                  │
 │  │Cerc │  │Rect    │  │Tri      ││   │visiter │  │visiter  │  │visiter   │                  │
