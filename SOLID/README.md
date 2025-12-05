@@ -554,6 +554,11 @@ public:
 };
 
 // Humain implémente tout
+/*  On utilise l'héritage multiple pour l'exemple ici. C'est rarement recommandable
+    et habituellement remplacable par d'autres solutions, par exemple l'héritage virtuelle (fancy)
+    ou une composition (typique).
+    Cela reste tout de même une bonne manière d'exemplifier l'Interface Segregation Principle.
+*/
 class Humain : public IExecutable, public IMangeable, public IDormable {
 public:
     void travailler() override { std::cout << "Travaille..." << std::endl; }
@@ -623,8 +628,8 @@ public:
 │   ┌─────────────────┐                                       │
 │   │  ServiceVente   │ ◄── Module HAUT niveau                │
 │   └────────┬────────┘                                       │
-│            │ dépend de                                      │
-│            ▼                                                │
+│            │ dépend de (détient par composition l'interface)│
+│           ◆                                                │
 │   ┌─────────────────┐                                       │
 │   │  «interface»    │ ◄── ABSTRACTION (possédée par         │
 │   │   IDatabase     │     le haut niveau)                   │
@@ -633,7 +638,7 @@ public:
 │            │                                                │
 │   ┌────────┴────────┐                                       │
 │   │                 │                                       │
-│   ▼                 ▼                                       │
+│   │                 │                                       │
 │ ┌──────────┐  ┌──────────┐                                  │
 │ │  MySQL   │  │ MongoDB  │ ◄── Modules BAS niveau           │
 │ │ Database │  │ Database │     dépendent de l'abstraction   │
