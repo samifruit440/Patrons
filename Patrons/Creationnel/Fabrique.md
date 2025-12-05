@@ -404,7 +404,7 @@ protected:
 | Patron | Relation |
 |--------|----------|
 | [Fabrique Abstraite](./FabriqueAbstraite.md) | Familles de produits |
-| [Prototype](./Singleton.md) | Alternative: cloner au lieu de créer |
+| [Prototype] | À venir ?
 | [Template Method](../Comportemental/PatronMethode.md) | Factory method EST un template method |
 
 ---
