@@ -499,7 +499,7 @@ int main() {
 |--------|----------|
 | [Fabrique](./Fabrique.md) | Version simplifiée (un produit) |
 | [Singleton](./Singleton.md) | La fabrique est souvent un singleton |
-| [Prototype](./Singleton.md) | Alternative: cloner des prototypes |
+| [Prototype]| À venir ?|
 
 ---
 
