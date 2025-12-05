@@ -30,16 +30,16 @@ Définir une **famille d'algorithmes**, encapsuler chacun d'eux et les rendre **
 │     ┌─────────────────────┐       ┌──────────────────────┐      │
 │     │      Contexte       │       │     «interface»      │      │
 │     ├─────────────────────┤       │      IStrategie      │      │
-│     │ -strategie          │──────►├──────────────────────┤      │
+│     │ -strategie          │◆─────├──────────────────────┤      │
 │     ├─────────────────────┤       │ +executer()          │      │
-│     │ +setStrategie(s)    │       └──────────┬───────────┘      │
+│     │ +setStrategie(s)    │       └──────────▲───────────┘      │
 │     │ +executerStrategie()│                  │                  │
 │     └─────────────────────┘                  │                  │
 │                                              │                  │
 │     executerStrategie() {       ┌────────────┼────────────┐     │
 │         strategie.executer();   │            │            │     │
 │     }                           │            │            │     │
-│                        ┌────────▼───┐ ┌──────▼─────┐ ┌────▼────┐│
+│                        ┌────────┴───┐ ┌──────┴─────┐ ┌────┴────┐│
 │                        │StrategieA  │ │StrategieB  │ │Strateg..││
 │                        ├────────────┤ ├────────────┤ ├─────────┤│
 │                        │+executer() │ │+executer() │ │executer ││
