@@ -409,4 +409,4 @@ public:
 
 ---
 
-[⬅️ Retour à l'Index](../../INDEX.md) | [➡️ Décorateur](../Structurel/Decorateur.md)
+[⬅️ Retour à l'Index](../../INDEX.md) | [➡️ PatronMethode](./PatronMethode.md)

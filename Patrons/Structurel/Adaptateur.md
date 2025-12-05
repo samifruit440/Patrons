@@ -444,4 +444,4 @@ public:
 
 ---
 
-[⬅️ Retour à l'Index](../../INDEX.md) | [➡️ Façade](./Facade.md)
+[⬅️ Retour à l'Index](../../INDEX.md) | [➡️ Composite](./Composite.md)

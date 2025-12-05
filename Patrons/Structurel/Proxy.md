@@ -497,4 +497,4 @@ Nouveau fichier (cache miss):
 
 ---
 
-[⬅️ Retour à l'Index](../../INDEX.md) | [➡️ État](../Comportemental/Etat.md)
+[⬅️ Retour à l'Index](../../INDEX.md) | [➡️ Commande](../Comportemental/Commande.md)

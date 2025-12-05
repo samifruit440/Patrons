@@ -505,4 +505,4 @@ public:
 
 ---
 
-[⬅️ Retour à l'Index](../../INDEX.md) | [➡️ Médiateur](./Mediateur.md)
+[⬅️ Retour à l'Index](../../INDEX.md) | [➡️ Fabrique](../Creationnel/Fabrique.md)

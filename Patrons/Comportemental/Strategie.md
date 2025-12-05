@@ -507,4 +507,4 @@ ctx.setStrategie([](std::vector<int>& v) {
 
 ---
 
-[⬅️ Retour à l'Index](../../INDEX.md) | [➡️ Commande](./Commande.md)
+[⬅️ Retour à l'Index](../../INDEX.md) | [➡️ Visiteur](./Visiteur.md)

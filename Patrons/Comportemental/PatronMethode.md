@@ -473,4 +473,4 @@ La classe de base (Hollywood) appelle les méthodes des sous-classes (acteurs), 
 
 ---
 
-[⬅️ Retour à l'Index](../../INDEX.md) | [➡️ Itérateur](./Iterateur.md)
+[⬅️ Retour à l'Index](../../INDEX.md) | [➡️ Stratégie](./Strategie.md)

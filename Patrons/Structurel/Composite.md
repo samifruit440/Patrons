@@ -385,4 +385,4 @@ public:
 
 ---
 
-[⬅️ Retour à l'Index](../../INDEX.md) | [➡️ Adaptateur](./Adaptateur.md)
+[⬅️ Retour à l'Index](../../INDEX.md) | [➡️ Décorateur](./Decorateur.md)
