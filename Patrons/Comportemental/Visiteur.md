@@ -50,6 +50,9 @@ Représenter une **opération à effectuer** sur les éléments d'une structure 
 │                                  │   ├────────┤  ├─────────┤  ├──────────┤                  │
 │                                  │   │visiter │  │visiter  │  │visiter   │                  │
 │                                  │   │Rect()  │  │Rect()   │  │Rect()    │                  │
+│                                  │   ├────────┤  ├─────────┤  ├──────────┤                  │   
+│                                  │   │visiter │  │visiter  │  │visiter   │                  │
+│                                  │   │Tri()   │  │Tri()    │  │Tri()     │                  │
 │                                  │   └────────┘  └─────────┘  └──────────┘                  │
 │                                  │                                                          │
 │  - Indépendantes                 │                                                          │
