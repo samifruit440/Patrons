@@ -4,6 +4,7 @@
 
 Ce répertoire contient une documentation exhaustive sur:
 
+- **Concepts OOP** - Héritage, composition, polymorphisme, bonnes pratiques
 - **Principes SOLID** - Les 5 principes fondamentaux de la POO
 - **Patrons GRASP** - Principes d'attribution des responsabilités
 - **Design Patterns** - Les patrons de conception du GoF
@@ -18,6 +19,7 @@ Ce répertoire contient une documentation exhaustive sur:
 RevFinalLOG2400/
 ├── INDEX.md                    # Page d'accueil avec navigation
 ├── README.md                   # Ce fichier
+├── OOP.md                      # 🔥 Concepts OOP (héritage, composition, etc.)
 ├── SOLID/
 │   └── README.md              # Principes SOLID
 ├── GRASP/

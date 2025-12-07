@@ -9,7 +9,8 @@
 ### 📐 Principes Fondamentaux
 | Sujet | Description |
 |-------|-------------|
-| [🎯 Principes SOLID](./SOLID/README.md) | Les 5 principes de conception orientée objet |
+| [�️ Concepts OOP](./OOP.md) | Héritage (public/privé/protégé), composition, virtuel, héritage multiple |
+| [�🎯 Principes SOLID](./SOLID/README.md) | Les 5 principes de conception orientée objet |
 | [🎓 Patrons GRASP](./GRASP/README.md) | General Responsibility Assignment Software Patterns |
 
 ### 🏗️ Patrons de Conception (Design Patterns)
